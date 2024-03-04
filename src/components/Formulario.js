@@ -22,35 +22,13 @@
                 });
             };
 
-
-        /*     const [prioridad, setPrioridad] = useState(2);  //cambiado  8 vcs
-            useEffect(() => {
-                setFormulario(prevFormulario => ({
-                ...prevFormulario,
-                Prioridad: prioridad
-                }));
-            }, [prioridad]);
-        */
-
-
             const enviarFormulario = (event) => {
                 event.preventDefault();
-        /*         setFormulario({
-                    ...formulario,
-                Prioridad: prioridad, 
-                }); */
-                
+
                 if (formulario.Titulo === '' || formulario.Descripcion === ''){
                     alert('Ingresa todos los campos');
                     return;
                 }
-        /* 
-                const formularioConPrioridad = {
-                    ...formulario,
-                    Prioridad: prioridad
-                }; */
-
-
 
                 setTickets([...tickets, formulario]);
                 setFormulario({
@@ -59,15 +37,7 @@
                     Descripcion: '',
                     Terminos: false
                 });
-                
-        /*          const handleDelete = (ticketToDelete) => {
-                    setTickets(tickets.filter(ticket => ticket !== ticketToDelete));
-                }
-        */
-        /*         console.log(formulario.Titulo+ ' ' +formulario.Prioridad+ ' ' +formulario.Descripcion); */
             }
-
-
 
         const handleDelete = (ticketToDelete) => {
             setTickets(tickets.filter(ticket => ticket !== ticketToDelete));

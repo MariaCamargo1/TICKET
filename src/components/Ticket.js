@@ -16,37 +16,4 @@
     };
 
     export default Ticket;
-
-/* function checkIsFormValid(){
-    let isValid = true;
-    const newErrors = {
-        Titulo: "",
-        Prioridad: "",
-        Descripcion: "",
-        Terminos: ""
-    }
-}
-
-if (!formState.title){
-
-    isValid = false;
-    newErrors.Titulo = "Titulo es requerido";
-}
-
-if (!formState.priority){
-    isValid = false;
-    newErrors.Prioridad = "Prioridad es requerido";
-}
-
-if (!formState.description){
-    isValid = false;
-    newErrors.Descripcion = "Descripcion es requerido";
-}
-
-if (!formState.terms){
-    isValid = false;
-    newErrors.Terminos = "Terminos es requerido";
-
-    if (!isValid) setErrors (newErrors);
-    return isValid;
-}  */
+    
