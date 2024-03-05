@@ -30,6 +30,37 @@
                     return;
                 }
 
+                fetch('http://localhost:4000/tickets', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formulario),
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Error al enviar formulario');
+    }
+    return response.json();
+})
+.then(data => {
+    console.log('Ticket creado:', data);
+    // Actualizar la lista de tickets con el nuevo ticket creado
+    setTickets([...tickets, data]);
+    // Reiniciar el formulario
+    setFormulario({
+        Titulo: '',
+        Prioridad: 2,
+        Descripcion: '',
+        Terminos: false
+    });
+})
+.catch(error => {
+    console.error('Error al enviar formulario:', error);
+    alert('Error al enviar formulario');
+});
+
+
                 setTickets([...tickets, formulario]);
                 setFormulario({
                     Titulo: '',
