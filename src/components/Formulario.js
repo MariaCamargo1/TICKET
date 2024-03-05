@@ -41,9 +41,7 @@
 })
 .then(data => {
     console.log('Ticket creado:', data);
-    // Actualizar la lista de tickets con el nuevo ticket creado
     setTickets([...tickets, data]);
-    // Reiniciar el formulario
     setFormulario({
         Titulo: '',
         Prioridad: 2,
