@@ -30,13 +30,9 @@
                     return;
                 }
 
-                fetch('http://localhost:4000/tickets', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formulario),
-})
+                fetch('http://localhost:4000/tickets', {method: 'POST', headers: {'Content-Type': 'application/json',},
+                body: JSON.stringify(formulario),})
+                        
 .then(response => {
     if (!response.ok) {
         throw new Error('Error al enviar formulario');
